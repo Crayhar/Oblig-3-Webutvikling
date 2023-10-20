@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
@@ -12,10 +11,10 @@
     <link href="css/font/css/solid.css" rel="stylesheet">
     <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Skoskar👞</title>
+    <title>Puma Ultima</title>
 </head>
 <body>
-    
+
     <!-- Header som skal være på toppen av siden på alle sidene -->
     <header>
         <nav>
@@ -32,35 +31,40 @@
         </nav>
     </header>
 
-    <!-- Stort bilde på sko som er på tilbud -->
     <section>
+        <!-- TODO: Legg til flere bilder -->
+        <img src="https://placehold.co/430x383" alt="">
         <h1>PUMA Ultima</h1>
-        <h2><s>1999NOK</s></h2>  <h2 style="color: yellow;">1499NOK</h2>
-        <img src="https://placehold.co/430x247" alt="">
-        <a href="product.html">Kjøp</a>
+        <h2><s>1999NOK</s>  1499NOK</h2>
+        <!-- Skostørrelser -->
+        <form class="boxed">
+            <input type="radio" name="skostørrelse" id="36">
+            <label for="36">36</label>
+            <input type="radio" name="skostørrelse" id="37">
+            <label for="37">37</label>
+            <input type="radio" name="skostørrelse" id="38">
+            <label for="38">38</label>
+            <input type="radio" name="skostørrelse" id="39">
+            <label for="39">39</label>
+            <input type="radio" name="skostørrelse" id="40">
+            <label for="40">40</label>
+            <input type="radio" name="skostørrelse" id="41">
+            <label for="41">41</label>
+        </form>
     </section>
 
-    <!-- Kategorier -->
-    <section>
-        <h2>Hva slags sko leter du etter?</h2>
-        <h3>Kvinner</h3>
-        <h3>Menn</h3>
-        <h3>Barn</h3>
-    </section>
+    <br>
+    <!-- Knapp for å legge produktet inn i handlekurven -->
+    <a href="shoppingcart.html" style="text-decoration: none;">
+        <button class="btn"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Legg til i handlekurv</button>
+    </a>
     
-
-    <!-- Skomerker -->
-    <section>
-        <h2>Skomerker</h2>
-        <h4>Puma</h4>
-        <h4>Nike</h4>
-        <h4>Adidas</h4>
-    </section>
-    
-    
-
-
-
+    <h3>Om produktet</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Magni placeat aspernatur voluptates consectetur, neque, 
+        minus voluptatibus atque veniam quo in, cum eos saepe eaque 
+        perspiciatis tempora mollitia architecto vero assumenda?</p>
+        
     <!-- Holder seg på bunnen av siden -->
     <section>
         <h2>Skoskar</h2>

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
@@ -12,10 +11,8 @@
     <link href="css/font/css/solid.css" rel="stylesheet">
     <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Skoskar👞</title>
-</head>
-<body>
-    
+    <title>Handlekurv</title>
+
     <!-- Header som skal være på toppen av siden på alle sidene -->
     <header>
         <nav>
@@ -31,35 +28,50 @@
             <i class="fa-regular fa-cart-shopping"></i>
         </nav>
     </header>
+    <h2>Kurven din</h2>
 
-    <!-- Stort bilde på sko som er på tilbud -->
+    <!-- Selve handlekurven med elementene som man har lagt til -->
     <section>
-        <h1>PUMA Ultima</h1>
-        <h2><s>1999NOK</s></h2>  <h2 style="color: yellow;">1499NOK</h2>
-        <img src="https://placehold.co/430x247" alt="">
-        <a href="product.html">Kjøp</a>
+        <h3>Puma Ultima</h3>
+        <!-- TODO: legg til bilde her -->
+        <p>Farge: Sort/Grå</p>
+        <p>Størrelse: 41</p>
+
+        <p>1499 NOK</p>
+
+        <p>Kun i nettbutikk</p>
+
+        <i class="fa-solid fa-x"></i>
+        <br>
+
+        <h3>Sko 2</h3>
+        <!-- TODO: legg til bilde her -->
+        <p>Farge: Hvit</p>
+        <p>Størrelse: 37</p>
+
+        <p>1999 NOK</p>
+
+        <p>Kun i nettbutikk</p>
+        <i class="fa-solid fa-x"></i>   
+
+        <h3>Total:</h3>
+        <h3>3498 NOK</h3>
     </section>
 
-    <!-- Kategorier -->
     <section>
-        <h2>Hva slags sko leter du etter?</h2>
-        <h3>Kvinner</h3>
-        <h3>Menn</h3>
-        <h3>Barn</h3>
+        <h2>Bestillings metode</h2>
+        <form>
+            <input type="radio" name="levering" id="hjem">
+            <label for="hjem">Hjemlevering</label>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <input type="radio" name="levering" id="posten">
+            <label for="posten">Levering til Posten</label>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </form>
+        <p>2 produkter</p>
+        <p>3498 NOK </p>
+        <button class="btn">Gå til kassen</button>
     </section>
-    
-
-    <!-- Skomerker -->
-    <section>
-        <h2>Skomerker</h2>
-        <h4>Puma</h4>
-        <h4>Nike</h4>
-        <h4>Adidas</h4>
-    </section>
-    
-    
-
-
 
     <!-- Holder seg på bunnen av siden -->
     <section>
@@ -77,5 +89,9 @@
 
             <h3>Lorem ipsum</h3>
     </section>
+
+</head>
+<body>
+    
 </body>
 </html>
