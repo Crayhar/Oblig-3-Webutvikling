@@ -1,47 +1,272 @@
-/* Skostørrelse valgt animasjon */
+/* Setter standard skrifttype for hele nettsiden */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/* Legger til litt padding til header, main og footer for mellomrom */
+header, main, footer {
+  padding: 1rem;
+}
+
+/* Styler header-seksjonen */
+header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-area: header;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+/* Gjør logo-lenken uten understrek */
+#logo {
+  text-decoration: none;
+  width: 104px;
+  height: 33.097px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Skjuler standard navigasjonsmeny */
+.navbar {
+  display: none;
+}
+
+/* Styler responsiv navigasjonsmeny */
+.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #242424;
+  margin: 0;
+  padding: 0;
+  top: 40px;
+  width: 100%;
+  list-style: none;
+  border-radius: 15px;
+}
+
+.responsive a {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+
+/* Styler en svart knapp */
+.black-btn {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: #171717;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 400;
+}
+/* Styler main-seksjonen i gridet */
+main {
+  grid-area: main;
+}
+
+/* Setter bredden til bilder inni main-seksjonen til 100% */
+main section img {
+  width: 100%;
+}
+
+/* Styler footer-seksjonen i gridet */
+footer {
+  grid-area: footer;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.left {
+  position: absolute;
+  left: 16px;
+}
+
+/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+#services {
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+#services h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#services article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+}
+
+#sale {
+  color: black;
+  font-family: Palatino Linotype;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sale-price {
+  color: #FAFAFA;
+  font-family: Palatino Linotype;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .boxed label {
-    display: inline-block;
-    border: solid 2px #ccc;
-    width: 46px;
-    height: 46px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    background: #D9D9D9;
-    text-align: center;
-    color: #000;
-    font-family: Palatino Linotype;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 700;
-    line-height: normal;
-    transition: all 0.3s;
-  }
-  
-  .boxed input[type="radio"] {
-    display: none;
-  }
-  
-  .boxed input[type="radio"]:checked + label {
-    border: solid 2px black;
-  }
+  display: inline-block;
+  border: solid 2px #ccc;
+  width: 46px;
+  height: 46px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #D9D9D9;
+  text-align: center;
+  color: #000;
+  font-family: Palatino Linotype;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s;
+}
+
+.boxed input[type="radio"] {
+  display: none;
+}
+
+.boxed input[type="radio"]:checked + label {
+  border: solid 2px black;
+}
 
 .btn {
-    display: flex;
-    width: 300px;
-    height: 55px;
-    padding: 3px 17px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: #000;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    color: #FAFAFA;
-    font-family: Palatino Linotype;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration: none;
+  display: flex;
+  width: 300px;
+  height: 55px;
+  padding: 3px 17px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #FAFAFA;
+  font-family: Palatino Linotype;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.btn-white {
+display: flex;
+width: 150px;
+height: 55px;
+padding: 3px 17px;
+border-radius: 30px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background: #FAFAFA;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+color: #000;
+font-family: Palatino Linotype;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+}
+
+/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+@media only screen and (min-width: 600px) {
+  /* Endrer grid-malen for bredere skjermer */
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+
+  /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      text-decoration: none;
+  }
+
+  /* Skjuler menyikoner i header */
+  #ham, .fa-magnifying-glass {
+      display: none;
+  }
+
+  /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+  .flex-section {
+      display: flex;
+      flex-direction: column;
+      justify-content:space-evenly;
+  }
+
+  /* Reduserer bildenes bredde til 50% i flex-seksjoner */
+  .flex-section img {
+      width: 50%;
+  }
+
+  /* Legger til litt mellomrom og justering i flex-seksjoner */
+  .flex-section section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
+  }
+
+  /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
+  .right img {
+      order: 1;
+  }
 }

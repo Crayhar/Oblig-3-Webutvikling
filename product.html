@@ -9,6 +9,10 @@
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
+    <!-- Importerte fonter fra Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Puma Ultima</title>
@@ -18,23 +22,26 @@
     <!-- Header som skal være på toppen av siden på alle sidene -->
     <header>
         <nav>
-            <!-- Ikon for navigasjonsmenyen på små skjermer -->
-            <i id="ham" class="fa-solid fa-bars"></i>
-
-            <a href="index.html">Skoskar</a>
-            
-            <!-- Ikon for profil på små skjermer -->
-            <i class="fa-regular fa-user"></i>
-
-            <!-- Ikon for handlekurv på små enheter -->
-            <i class="fa-regular fa-cart-shopping"></i>
+            <a href="index.html" id="logo">Skoskar</a>
+            <div>
+                <!-- Ikon for søkefunksjonen -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- Ikon for navigasjonsmenyen på små skjermer -->
+                <i id="ham" class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="navbar">
+                <!-- Navigasjonsmeny med lenker -->
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="product.html"><i class="fa-solid fa-shop"></i> Products</a></li>
+                <li><a href="shoppingcart.html"><i class="fa-regular fa-cart-shopping"></i> Handlekurv</a></li>
+            </ul>
         </nav>
-    </header>
-
+    </header>  
+<main>
     <section>
-        <!-- TODO: Legg til flere bilder -->
-        <img src="https://placehold.co/430x383" alt="">
-        <h1>PUMA Ultima</h1>
+        <img src="img/boot-250012_640.jpg" alt="Bilde av brune tursko">
+        <p>Image by <a href="https://pixabay.com/users/nuzree-27365/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=250012">Mohamed Nuzrath</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=250012">Pixabay</a></p>
+        <h1>Forsen All-Tarrain</h1>
         <h2><s>1999NOK</s>  1499NOK</h2>
         <!-- Skostørrelser -->
         <form class="boxed">
@@ -55,31 +62,59 @@
 
     <br>
     <!-- Knapp for å legge produktet inn i handlekurven -->
-    <a href="shoppingcart.html" style="text-decoration: none;">
-        <button class="btn"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Legg til i handlekurv</button>
-    </a>
+    <a href="shoppingcart.html" style="text-decoration: none;" class="btn">
+        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>Legg til i handlekurv</a>
     
-    <h3>Om produktet</h3>
+    <!-- Inneholder info om selve produktet -->
+    <section>
+        <h3>Om produktet</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Magni placeat aspernatur voluptates consectetur, neque, 
         minus voluptatibus atque veniam quo in, cum eos saepe eaque 
         perspiciatis tempora mollitia architecto vero assumenda?</p>
+    </section>
+    
         
     <!-- Holder seg på bunnen av siden -->
-    <section>
-        <h2>Skoskar</h2>
-
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+    <section id="services">
+        <h2 style="font-family:'Julius Sans One', sans-serif;">Skoskar</h2>
+        <section class="flex-section" style="align-items: center; flex-direction: row;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </section>
+        
         <p>Rating score 4.5 | 2000 anmeldelser</p>
-            <h3>Lorem ipsum</h3>
-
-            <h3>Lorem ipsum</h3>
-
-            <h3>Lorem ipsum</h3>
+        <br>
+        <hr>
+        <h3>Om oss</h3>
+        <hr>
+        <h3>Retur side</h3>
+        <hr>
+        <h3>FAQ </h3>
+        
     </section>
+</main>
+<footer>
+    <p>Siden er laget av Oskar Linus Holone</p>
+</footer>
+    <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".navbar")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "navbar") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>

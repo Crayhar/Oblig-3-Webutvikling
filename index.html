@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
@@ -10,72 +9,108 @@
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
+    <!-- Importerte fonter fra Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Skoskar👞</title>
+    <title>Skoskar</title>
 </head>
 <body>
-    
-    <!-- Header som skal være på toppen av siden på alle sidene -->
-    <header>
-        <nav>
-            <!-- Ikon for navigasjonsmenyen på små skjermer -->
-            <i id="ham" class="fa-solid fa-bars"></i>
-
-            <a href="index.html">Skoskar</a>
+    <!-- Hovedbeholderen for nettstedet -->
+    <div id="grid-container">
+        <header>
+            <nav>
+                <a href="index.html" id="logo">Skoskar</a>
+                <div>
+                    <!-- Ikon for søkefunksjonen -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- Ikon for navigasjonsmenyen på små skjermer -->
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <!-- Navigasjonsmeny med lenker -->
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="product.html"><i class="fa-solid fa-shop"></i> Products</a></li>
+                    <li><a href="shoppingcart.html"><i class="fa-regular fa-cart-shopping"></i> Handlekurv</a></li>
+                </ul>
+            </nav>
+        </header>   
+        <main>
+            <!-- Seksjon 1 med en overskrift og en beskrivelse -->
             
-            <!-- Ikon for profil på små skjermer -->
-            <i class="fa-regular fa-user"></i>
+                <section class="flex-section">
+                    <h1 id="sale">Forsen All-Tarrain</h1>
+                    <h3 id="sale-price" style="color: rgb(173, 173, 0);"><s style="color: black;">1999 NOK</s> 1499 NOK</h3>
+                    <a href="product.html" style="text-decoration: none;" class="btn-white">Kjøp</a>
+                    <br>
+                    <img src="img/boot-250012_640.jpg" alt="Grå placeholder bilde">
+                    Image by <a href="https://pixabay.com/users/nuzree-27365/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=250012">Mohamed Nuzrath</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=250012">Pixabay</a>
+                </section>
+            <br>
+            <h2 style="text-align: center;">Hva slags sko leter du etter?</h2>
+                <section class="flex-section">
+                <h3 style="text-align: center;">Dame</h3>
+                <img src="img/pin-up-2171312_640.jpg" alt="Grå placeholder bilde">  
+                Image by <a href="https://pixabay.com/users/whitedaemon-1982503/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2171312">Alexandr Ivanov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2171312">Pixabay</a>
+            </section>            
+            <br>
+            <section class="flex-section">
+                <h3 style="text-align: center;">Mann</h3>
+                <img src="img/brown-leather-shoes-1842606_640.jpg" alt="Grå placeholder bilde"> 
+                Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1842606">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1842606">Pixabay</a>
+            </section>
+            <br>
+            <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
+            <section class="flex-section">
+                <h3 style="text-align: center;">Barn</h3>
+                <img src="img/child-4818426_640.jpg" alt="Grå placeholder bilde">
+                Image by <a href="https://pixabay.com/users/congerdesign-509903/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4818426">congerdesign</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4818426">Pixabay</a>
+            </section>
+            <br>
 
-            <!-- Ikon for handlekurv på små enheter -->
-            <i class="fa-regular fa-cart-shopping"></i>
-        </nav>
-    </header>
-
-    <!-- Stort bilde på sko som er på tilbud -->
-    <section>
-        <h1>PUMA Ultima</h1>
-        <h2><s>1999NOK</s></h2>  <h2 style="color: yellow;">1499NOK</h2>
-        <img src="https://placehold.co/430x247" alt="">
-        <a href="product.html">Kjøp</a>
-    </section>
-
-    <!-- Kategorier -->
-    <section>
-        <h2>Hva slags sko leter du etter?</h2>
-        <h3>Kvinner</h3>
-        <h3>Menn</h3>
-        <h3>Barn</h3>
-    </section>
-    
-
-    <!-- Skomerker -->
-    <section>
-        <h2>Skomerker</h2>
-        <h4>Puma</h4>
-        <h4>Nike</h4>
-        <h4>Adidas</h4>
-    </section>
-    
-    
-
-
-
-    <!-- Holder seg på bunnen av siden -->
-    <section>
-        <h2>Skoskar</h2>
-
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <p>Rating score 4.5 | 2000 anmeldelser</p>
-            <h3>Lorem ipsum</h3>
-
-            <h3>Lorem ipsum</h3>
-
-            <h3>Lorem ipsum</h3>
-    </section>
+            <!-- Seksjon 3 for tjenester med flere artikler -->
+            <section id="services">
+                <h2 style="font-family:'Julius Sans One', sans-serif;">Skoskar</h2>
+                <section class="flex-section" style="align-items: center; flex-direction: row;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </section>
+                
+                <p>Rating score 4.5 | 2000 anmeldelser</p>
+                <br>
+                <hr>
+                <h3>Om oss</h3>
+                <hr>
+                <h3>Retur side</h3>
+                <hr>
+                <h3>FAQ </h3>
+                
+            </section>
+        </main>
+        <footer>
+            <p>Siden er laget av Oskar Linus Holone</p>
+        </footer>
+    </div>
+    <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".navbar")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "navbar") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>
